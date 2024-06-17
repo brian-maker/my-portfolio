@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { FiMenu, FiX } from 'react-icons/fi';
+import { motion } from 'framer-motion'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+const svgVariants = {
+  initial:{rotate:-180},
+  animate:{
+    rotate: 0,
+    transition:{duration:2}
+  }
+}
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,22 +24,25 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md fixed w-full z-10">
-      <div className="container mx-auto px-4 flex justify-between items-center h-16">
+      <div className="container lg:max-w-7xl mx-auto px-4 flex justify-between items-center h-16 flex-row-reverse md:flex-row">
         <Link to="/" className="text-xl font-bold">
-          MyLogo
+        <motion.svg
+        variants={svgVariants}
+        initial="initial"
+        animate="animate"
+        xmlns="http://www.w3.org/2000/svg" width="61" height="32"><path 
+        fill="#33323D" fillRule="evenodd" d="M60.082 5.878L44.408 32 28.735 5.878h31.347zM15.673 0l15.674 26.122H0L15.673 0z"/></motion.svg>
         </Link>
         <div className="hidden md:flex space-x-6">
-          <NavLink to="/" exact activeClassName="text-blue-500" className="hover:text-blue-500">
+          <NavLink to="/" exact="true"  className="text-black font-bold hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200">
             Home
           </NavLink>
-          <NavLink to="/about" activeClassName="text-blue-500" className="hover:text-blue-500">
+          <NavLink to="/about" exact="true" className="text-black font-bold hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200">
             About
           </NavLink>
-          <NavLink to="/services" activeClassName="text-blue-500" className="hover:text-blue-500">
-            Services
-          </NavLink>
-          <NavLink to="/contact" activeClassName="text-blue-500" className="hover:text-blue-500">
-            Contact
+          
+          <NavLink to="/contact" exact="true"  className="text-black font-bold hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200">
+            contact
           </NavLink>
         </div>
         <div className="md:hidden">
@@ -37,24 +52,22 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        className={`fixed inset-0 bg-black bg-opacity-70 transition-opacity md:opacity-0 duration-300 ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         onClick={toggleMenu}
       />
       <div
-        className={`fixed top-0 left-0 w-64 bg-white shadow-md h-full transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        className={`fixed top-0 left-0 w-64 bg-white shadow-md h-full transform transition-transform duration-300 md:hidden ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
         <div className="flex flex-col p-4 space-y-6">
-          <NavLink to="/" exact activeClassName="text-blue-500" className="hover:text-blue-500" onClick={toggleMenu}>
+          <NavLink to="/" exact="true" className="text-black font-semibold hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200" onClick={toggleMenu}>
             Home
           </NavLink>
-          <NavLink to="/about" activeClassName="text-blue-500" className="hover:text-blue-500" onClick={toggleMenu}>
+          <NavLink to="/about" exact="true" className="text-black font-semibold hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200" onClick={toggleMenu}>
             About
           </NavLink>
-          <NavLink to="/services" activeClassName="text-blue-500" className="hover:text-blue-500" onClick={toggleMenu}>
-            Services
-          </NavLink>
-          <NavLink to="/contact" activeClassName="text-blue-500" className="hover:text-blue-500" onClick={toggleMenu}>
-            Contact
+         
+          <NavLink  to="/contact" exact="true" className="text-black font-semibold hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200"onClick={toggleMenu}>
+            contact
           </NavLink>
         </div>
       </div>
