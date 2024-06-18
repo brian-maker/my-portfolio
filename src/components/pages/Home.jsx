@@ -36,13 +36,16 @@ function Home() {
       
       <section data-aos="zoom-in-down" data-aos-duration="1500"
       className='hero py-10 relative'>
+        <div className='pt-[23rem] md:hidden'></div>
         <article
         data-aos="fade-up"
         data-aos-duration="1500"
         data-aos-delay="300"
         data-aos-id="super-duper"
-        className='bg-white absolute bottom-0 h-[50%] w-[50%]md:w-[25%]border-2 border-black'>
-          <h1>Hey, I’m Alex Spencer and I love building beautiful websites</h1>
+        className='bg-white md:absolute bottom-0 h-[40%] w-full md:w-[25%] border-2 border-black text- pt-5 pl-5'>
+          <h1 className='text-bgFooter font-mono text-3xl font-extrabold'>
+            Hey, I’m Brian <br/> 
+            and I love building beautiful <br/> websites</h1>
           <button>button</button>
         </article>
       </section>
