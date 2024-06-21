@@ -5,7 +5,7 @@
 .line{
     height: 2px;
     background-color: rgb(213, 207, 207);
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 .active{
@@ -25,7 +25,6 @@
     .hero {
     background-image: url('./assets/homepage/tablet/image-homepage-hero.jpg');
     background-size: cover;
-
     }
 }
 @media (min-width: 1024px) {
@@ -34,4 +33,49 @@
     }
 }
 
+}
+.profileImage{
+    background-image: url(./assets/homepage/mobile/image-profile.jpg);
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+@media (min-width: 720px){
+.profileImage{
+    background-image: url(./assets/homepage/mobile/image-profile.jpg);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+}
+.dine{
+    background-image: url(./assets/portfolio/mobile/dine-mobiless.png);
+    height: 50vh;
+    background-size: cover;
+    background-position: center top;
+}
+@media (min-width: 640px){
+    .dine{
+        background-image: url(./assets/portfolio/tablet/dine-tabletss.png);
+    }
+}
+.manage{
+    background-image: url(./assets/portfolio/mobile/image-portfolio-manage.jpg);
+    height: 50vh;
+    background-size: cover;
+    background-position: center top;
+}
+.bookmark{
+    background-image: url(./assets/portfolio/mobile/image-portfolio-bookmark.jpg);
+    height: 50vh;
+    background-size: cover;
+    background-position: center top;
+}
+.Scoot{
+    background-image: url(./assets/portfolio/mobile/Mobile-Home.png);
+    height: 50vh;
+    background-size: cover;
+    background-position: center top;
 }

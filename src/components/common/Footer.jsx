@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion'
+import github from '../../assets/icons/github.svg'
+import linkedin from '../../assets/icons/linkedin.svg'
+import twitter from '../../assets/icons/twitter.svg'
 
 
 const svgVariants = {
@@ -12,8 +15,8 @@ const svgVariants = {
   }
 function Footer() {
   return (
-    <main className=" bg-darkGray">
-        <section className='container mx-auto lg:max-w-7xl mt-10 flex justify-between items-center border-2 py-20 flex-col md:flex-row gap-10 px-8'>
+    <main className=" bg-darkGray border-2">
+        <section className='container mx-auto lg:max-w-7xl mt-10 flex justify-between items-center  py-[3rem] flex-col md:flex-row gap-10 px-8'>
             <article className='flex flex-col items-center text-center justify-between gap-5 md:gap-10 md:flex-row'>
                 <Link to="/" className="text-xl font-bold">
             <motion.svg
@@ -29,9 +32,9 @@ function Footer() {
                     hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200">
                         Home
                     </NavLink>
-                    <NavLink to="/about" exact="true" className="text-white
+                    <NavLink to="/Portfolio" exact="true" className="text-white
                     hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200">
-                        About
+                        Portfolio
                     </NavLink>
                     
                     <NavLink  to="/contact" exact="true" className="text-white
@@ -41,8 +44,13 @@ function Footer() {
                 </div>
             </article>
 
-            <article>
-                social media icons
+            <article className='flex gap-5'>
+                <a href="/"><img src={github} alt="github" /></a>
+                {/* <a href=""><img src={twitter} alt="twitter" /></a> */}
+                <a href="/">
+                <img src={linkedin} alt="linkedin" />
+                </a>
+                
             </article>
         </section>
     </main>

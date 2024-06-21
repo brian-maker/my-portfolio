@@ -37,8 +37,8 @@ const Navbar = () => {
           <NavLink to="/" exact="true"  className="text-black font-bold hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200">
             Home
           </NavLink>
-          <NavLink to="/about" exact="true" className="text-black font-bold hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200">
-            About
+          <NavLink to="/Portfolio" exact="true" className="text-black font-bold hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200">
+          Portfolio
           </NavLink>
           
           <NavLink to="/contact" exact="true"  className="text-black font-bold hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200">
@@ -62,8 +62,8 @@ const Navbar = () => {
           <NavLink to="/" exact="true" className="text-black font-semibold hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200" onClick={toggleMenu}>
             Home
           </NavLink>
-          <NavLink to="/about" exact="true" className="text-black font-semibold hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200" onClick={toggleMenu}>
-            About
+          <NavLink to="/Portfolio" exact="true" className="text-black font-semibold hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200" onClick={toggleMenu}>
+            Portfolio
           </NavLink>
          
           <NavLink  to="/contact" exact="true" className="text-black font-semibold hover:text-yellow text-xl font-mono tracking-wide transition-all duration-200"onClick={toggleMenu}>
