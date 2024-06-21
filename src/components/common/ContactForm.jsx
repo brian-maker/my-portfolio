@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -12,13 +13,24 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      alert('Your message has been sent successfully');
-      setIsSubmitting(false);
-      setFormData({ name: '', email: '', message: '' });
-    }, 2000);
-  };
 
+    emailjs
+      .sendForm('service_37q2pt7', 'template_6248czm', e.target, 'UTtZgzv0m297lUyRm') // Replace with your service ID and template ID
+      .then(
+        (result) => {
+          console.log('SUCCESS!', result.text);
+          alert('Your message has been sent successfully');
+          setIsSubmitting(false);
+          setFormData({ name: '', email: '', message: '' });
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          alert('There was an issue sending your message. Please try again later.');
+          setIsSubmitting(false);
+        }
+      );
+  };
+  
   return (
     <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
       <div className="flex flex-col">
@@ -64,8 +76,8 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="bg-darkGray py-4 px-4 text-white hover:bg-yellow-600 transition duration-300 w-[10rem] "
-      > 
+        className="bg-darkGray py-4 px-4 text-white hover:bg-yellow-600 transition duration-300 w-[10rem]"
+      >
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
     </form>

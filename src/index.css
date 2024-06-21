@@ -50,11 +50,45 @@
     background-position: center;
 }
 }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+}
+.overlay a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+.dine:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+.manage:hover .overlay{
+    opacity: 1; /* Show overlay on hover */
+}
+.bookmark:hover .overlay{
+    opacity: 1; /* Show overlay on hover */
+}
+.Scoot:hover .overlay{
+    opacity: 1; /* Show overlay on hover */
+}
 .dine{
     background-image: url(./assets/portfolio/mobile/dine-mobiless.png);
     height: 50vh;
+    width: 100%;
     background-size: cover;
     background-position: center top;
+    position: relative;
 }
 @media (min-width: 640px){
     .dine{
@@ -66,16 +100,21 @@
     height: 50vh;
     background-size: cover;
     background-position: center top;
+    position: relative;
 }
 .bookmark{
     background-image: url(./assets/portfolio/mobile/image-portfolio-bookmark.jpg);
     height: 50vh;
     background-size: cover;
     background-position: center top;
+    position: relative;
+
 }
 .Scoot{
     background-image: url(./assets/portfolio/mobile/Mobile-Home.png);
     height: 50vh;
     background-size: cover;
     background-position: center top;
+    position: relative;
+
 }

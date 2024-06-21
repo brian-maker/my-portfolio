@@ -45,9 +45,9 @@ function Footer() {
             </article>
 
             <article className='flex gap-5'>
-                <a href="/"><img src={github} alt="github" /></a>
+                <a href="https://github.com/brian-maker"><img src={github} alt="github" /></a>
                 {/* <a href=""><img src={twitter} alt="twitter" /></a> */}
-                <a href="/">
+                <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile">
                 <img src={linkedin} alt="linkedin" />
                 </a>
                 
