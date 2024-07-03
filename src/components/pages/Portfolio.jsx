@@ -57,7 +57,7 @@ function Portfolio() {
               </div>
             </div>
             <p 
-            className="text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia ipsam quasi incidunt consequuntur eos vitae libero deserunt.</p>
+            className="text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold">The Dine website restaurant is an elegant and user-friendly platform that highlights the restaurant's unique dining experience. It features detailed descriptions and high-quality images of menu items, allowing visitors to explore the culinary offerings.</p>
           </article>
           
         </div>
@@ -86,7 +86,7 @@ function Portfolio() {
             <p
             data-aos="zoom-in" data-aos-duration="1500"
             data-aos-delay="100"
-            className="text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia ipsam quasi incidunt consequuntur eos vitae libero deserunt.</p>
+            className="text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold">The Manage website is a project that showcases a sleek and modern interface for a task management application. It demonstrates best practices in responsive web design, user experience, and front-end development. The website typically includes features such as project and task tracking, team collaboration tools, and progress monitoring.</p>
           </article>
         </div>
         {/* project 3 */}
@@ -114,7 +114,7 @@ function Portfolio() {
             <p
             data-aos="zoom-in" data-aos-duration="1500"
             data-aos-delay="100"
-            className="text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia ipsam quasi incidunt consequuntur eos vitae libero deserunt.</p>
+            className="text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold">The Bookmark website is a project that showcases a modern and clean design for a bookmarking application. It demonstrates how to build a responsive and interactive website that allows users to save and organize their favorite web pages. </p>
           </article>
         </div>
         {/* project 4 */}
@@ -142,7 +142,7 @@ function Portfolio() {
             <p
             data-aos="zoom-in" data-aos-duration="1500"
             data-aos-delay="100"
-            className="text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia ipsam quasi incidunt consequuntur eos vitae libero deserunt.</p>
+            className="text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold">The Scoot website is a project designed to demonstrate a sleek, modern interface for a scooter rental service. The website features a user-friendly layout that showcases the ease and convenience of renting scooters for urban transportation. </p>
           </article>
         </div>
         {/* Add more projects as needed */}
