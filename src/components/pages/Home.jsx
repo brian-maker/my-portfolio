@@ -77,8 +77,8 @@ function Home() {
           <p className="text-[0.9375rem] !leading-[1.875rem] lg:text-base text-gray-500 font-mono text-xl">
           Hello! I'm a passionate front-end developer with a keen eye for design and a love for creating interactive and user-friendly web experiences. My journey in web development began with a fascination for how websites work and an eagerness to learn the technologies behind them. Over the years, I have honed my skills and built a diverse portfolio of projects that showcase my expertise in modern web development practices.
           </p>
-          <button className='flex border-2 hover:border-gray-500 justify-between items-center px-3 py-3 w-[10rem] bg-darkGray hover:bg-transparent transition duration-200 ease-linear text-white hover:text-darkGray'>
-            <a href="/Portfolio" className='font-mono'>Go to portfolio</a>
+          <button onClick={handleNavigate} className='flex border-2 hover:border-gray-500 justify-between items-center px-3 py-3 w-[10rem] bg-darkGray hover:bg-transparent transition duration-200 ease-linear text-white hover:text-darkGray'>
+            <span className='font-mono'>Go to portfolio</span>
           </button>
 
         </article>

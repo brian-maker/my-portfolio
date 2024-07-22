@@ -1,9 +1,15 @@
 import React ,{useEffect} from 'react'
+import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
 function Cta() {
+    const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate('/Contact');
+  };
 
     useEffect(() => {
         AOS.init();
@@ -36,11 +42,11 @@ function Cta() {
             data-aos-duration="1000"
             data-aos-delay="700" 
             className='flex items-center justify-center md:justify-end'>
-                <button className='border-2 w-[10rem] font-mono py-4 focus:outline-none text-xl transition-all duration-500 hover:bg-transparent hover:text-darkGray capitalize 
+                <button onClick={handleNavigate} className='border-2 w-[10rem] font-mono py-4 focus:outline-none text-xl transition-all duration-500 hover:bg-transparent hover:text-darkGray capitalize 
                 bg-darkGray text-white'>
-                    <a href="/Contact">
+                    <span>
                         contact me
-                    </a>
+                    </span>
                 </button>
             </div>
         </section>
