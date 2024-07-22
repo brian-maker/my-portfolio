@@ -1,9 +1,14 @@
-import React ,{useEffect} from 'react'
+import React ,{useEffect, useState} from 'react'
 import Cta from '../common/Cta'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function Portfolio() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpansion = () => {
+    setIsExpanded(!isExpanded);
+  };
   useEffect(() => {
     // Initialize AOS
     AOS.init();
@@ -57,7 +62,16 @@ function Portfolio() {
               </div>
             </div>
             <p 
-            className="text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold">The Dine website restaurant is an elegant and user-friendly platform that highlights the restaurant's unique dining experience. It features detailed descriptions and high-quality images of menu items, allowing visitors to explore the culinary offerings.</p>
+            className={`text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold ${
+              !isExpanded ? 'line-clamp-3' : ''
+            }`}>
+              The Dine website restaurant is an elegant and user-friendly platform that highlights the restaurant's unique dining experience. It features detailed descriptions and high-quality images of menu items, allowing visitors to explore the culinary offerings.</p>
+              <button
+                onClick={toggleExpansion}
+                className="text-gray-500 hover:underline"
+              >
+                {isExpanded ? 'Show Less' : 'Show More'}
+              </button>
           </article>
           
         </div>
@@ -84,9 +98,15 @@ function Portfolio() {
               </div>
             </div>
             <p
-            data-aos="zoom-in" data-aos-duration="1500"
-            data-aos-delay="100"
-            className="text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold">The Manage website is a project that showcases a sleek and modern interface for a task management application. It demonstrates best practices in responsive web design, user experience, and front-end development. The website typically includes features such as project and task tracking, team collaboration tools, and progress monitoring.</p>
+            className={`text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold ${
+              !isExpanded ? 'line-clamp-3' : ''
+            }`}>The Manage website is a project that showcases a sleek and modern interface for a task management application. It demonstrates best practices in responsive web design, user experience, and front-end development. The website typically includes features such as project and task tracking, team collaboration tools, and progress monitoring.</p>
+            <button
+                onClick={toggleExpansion}
+                className="text-gray-500 hover:underline"
+              >
+                {isExpanded ? 'Show Less' : 'Show More'}
+              </button>
           </article>
         </div>
         {/* project 3 */}
@@ -112,10 +132,16 @@ function Portfolio() {
               </div>
             </div>
             <p
-            data-aos="zoom-in" data-aos-duration="1500"
-            data-aos-delay="100"
-            className="text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold">The github user search website is a project that allows the search of a username using the Github Api. It allows the Search for GitHub users by their username displaying relevant user information based on their search.It also has the option to switch between light and dark themes
+            className={`text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold ${
+              !isExpanded ? 'line-clamp-3' : ''
+            }`}>The github user search website is a project that allows the search of a username using the Github Api. It allows the Search for GitHub users by their username displaying relevant user information based on their search.It also has the option to switch between light and dark themes
           </p>
+          <button
+                onClick={toggleExpansion}
+                className="text-gray-500 hover:underline"
+              >
+                {isExpanded ? 'Show Less' : 'Show More'}
+              </button>
           </article>
         </div>
         {/* project 4 */}
@@ -141,9 +167,15 @@ function Portfolio() {
               </div>
             </div>
             <p
-            data-aos="zoom-in" data-aos-duration="1500"
-            data-aos-delay="100"
-            className="text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold">The Scoot website is a project designed to demonstrate a sleek, modern interface for a scooter rental service. The website features a user-friendly layout that showcases the ease and convenience of renting scooters for urban transportation. </p>
+            className={`text-[0.9375rem] lg:text-base text-gray-800 font-mono font-semibold ${
+              !isExpanded ? 'line-clamp-3' : ''
+            }`}>The Scoot website is a project designed to demonstrate a sleek, modern interface for a scooter rental service. The website features a user-friendly layout that showcases the ease and convenience of renting scooters for urban transportation. </p>
+            <button
+                onClick={toggleExpansion}
+                className="text-gray-500 hover:underline"
+              >
+                {isExpanded ? 'Show Less' : 'Show More'}
+              </button>
           </article>
         </div>
         {/* Add more projects as needed */}

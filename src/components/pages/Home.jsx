@@ -41,7 +41,7 @@ function Home() {
     data-aos-duration="1500" id='home' className="container mx-auto lg:max-w-7xl pt-20 px-5 ">
       
       <section data-aos="zoom-in-down" data-aos-duration="1500"
-      className='hero py-10 relative  pb-0 mb-10'>
+      className='hero py-10 relative  pb-0 md:mb-10'>
         <article
         data-aos="fade-in"
         data-aos-duration="2000"
